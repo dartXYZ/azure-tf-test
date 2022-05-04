@@ -17,6 +17,11 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroup"
   location = "germanywestcentral"
+  tags = {
+    Environment = "Terraform Getting Started"
+    Team = "DevOps"
+  }
+  
 }
 # Create a virtual network
 resource "azurerm_virtual_network" "vnet" {
